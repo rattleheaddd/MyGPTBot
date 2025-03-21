@@ -1,0 +1,3 @@
+pyTelegramBotAPI
+pymupdf
+g4f
