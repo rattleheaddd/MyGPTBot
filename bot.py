@@ -52,7 +52,7 @@ def handle_message(message):
         bot.send_message(message.chat.id, "Извините, выбранная модель недоступна. Пожалуйста, выберите другую модель.", reply_markup=get_model_keyboard())
     else:
         response = format_text(response)
-        user_histories[user_id] = user_histories[user_id][-100:]
+        user_histories[user_id] = user_histories[user_id][-10:]
 
         for part in split_message(response):
             bot.send_message(message.chat.id, part, parse_mode="HTML")
@@ -93,7 +93,7 @@ def handle_pdf(message):
                 analysis = format_text(analysis)
                 for part in split_message(analysis):
                     bot.send_message(message.chat.id, f"📄 Анализ вашего файла:\n\n{part}", parse_mode="HTML")
-                user_histories[user_id] = user_histories[user_id][-100:]
+                user_histories[user_id] = user_histories[user_id][-10:]
 
         except ValueError as e:
             bot.send_message(message.chat.id, f"Ошибка: {str(e)}")

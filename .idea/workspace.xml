@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/MyGptTelegramBot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +23,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "rattleheaddd"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "rattleheaddd"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rattleheaddd/MyGPTBot",
+    "accountId": "edc14674-25f6-49e9-b2a3-e4eb3e31e227"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -68,7 +80,9 @@
       <option name="presentableId" value="Default" />
       <updated>1742547189916</updated>
       <workItem from="1742547194626" duration="1838000" />
-      <workItem from="1742565404204" duration="6586000" />
+      <workItem from="1742565404204" duration="7791000" />
+      <workItem from="1742744830233" duration="1407000" />
+      <workItem from="1742891175024" duration="2436000" />
     </task>
     <servers />
   </component>
