@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-    </list>
+    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="messages history 10 instead of 100" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,22 +20,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "rattleheaddd"
+      &quot;assignee&quot;: &quot;rattleheaddd&quot;
     }
   ],
-  "lastFilter": {
-    "assignee": "rattleheaddd"
+  &quot;lastFilter&quot;: {
+    &quot;assignee&quot;: &quot;rattleheaddd&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rattleheaddd/MyGPTBot",
-    "accountId": "edc14674-25f6-49e9-b2a3-e4eb3e31e227"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rattleheaddd/MyGPTBot&quot;,
+    &quot;accountId&quot;: &quot;edc14674-25f6-49e9-b2a3-e4eb3e31e227&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -83,11 +80,25 @@
       <workItem from="1742565404204" duration="7791000" />
       <workItem from="1742744830233" duration="1407000" />
       <workItem from="1742891175024" duration="2436000" />
+      <workItem from="1742976996835" duration="411000" />
     </task>
+    <task id="LOCAL-00001" summary="messages history 10 instead of 100">
+      <option name="closed" value="true" />
+      <created>1742977044383</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742977044383</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="messages history 10 instead of 100" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages history 10 instead of 100" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyGptTelegramBot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1742576526713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -65,7 +65,7 @@ def handle_pdf(message):
         file_info = bot.get_file(message.document.file_id)
         downloaded_file = bot.download_file(file_info.file_path)
 
-        file_path = f"temp_{message.document.file_name}"
+        file_path = f"/opt/MyGPTBot/temp/temp_{message.document.file_name}"
         save_file_to_disk(file_path, downloaded_file)
 
         try:
