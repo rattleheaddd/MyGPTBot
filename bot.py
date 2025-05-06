@@ -1,16 +1,25 @@
 import telebot
 from config import TOKEN
+from format_text import format_text
+from get_providers import get_provider_keyboard
+from gpt_handler import analyze_with_chatgpt
 from models import get_model_keyboard
 from pdf_handler import extract_text_from_pdf
-from gpt_handler import analyze_with_chatgpt
 from split_message import split_message
 from utils import save_file_to_disk, remove_file
-from format_text import format_text
 
 bot = telebot.TeleBot(TOKEN)
 
 user_models = {}
+user_providers = {}
 user_histories = {}
+
+VALID_PROVIDERS = {
+    "AllenAI", "ARTA", "Blackbox", "ChatGLM", "ChatGpt", "ChatGptEs", "Cloudflare", "Copilot", "DDG",
+    "DeepInfraChat", "Dynaspark", "Free2GPT", "FreeGpt", "GizAI", "Glider", "Goabror", "ImageLabs",
+    "Jmuz", "LambdaChat", "Liaobots", "OIVSCode", "PerplexityLabs", "Pi", "Pizzagpt", "PollinationsAI",
+    "PollinationsImage", "TeachAnything", "TypeGPT", "You", "Websim", "Yqcloud",
+}
 
 VALID_MODELS = {
     'deepseek-chat', 'deepseek-v3', 'deepseek-r1', 'grok-3', 'grok-3-r1', 'gpt-4o', 'gpt-4o-mini',
@@ -20,21 +29,34 @@ VALID_MODELS = {
 }
 
 @bot.message_handler(commands=['start'])
-def start(message):
-    bot.send_message(message.chat.id, "Привет! Задавай мне вопросы или отправляй PDF/txt файлы для анализа.\nВведи /help, чтобы узнать, какие у меня есть команды.")
+def command_start(message):
+    bot.send_message(message.chat.id, "Привет! Задавай мне вопросы или отправляй PDF/txt файлы для"
+                                      " анализа.\nВведи /help, чтобы узнать, какие у меня есть команды.")
 
 @bot.message_handler(commands=['help'])
-def help(message):
-    bot.send_message(message.chat.id, "Доступные команды на данный момент:\n" + "/models - выбрать модель, которая будет использоваться для ответа.\n" + "/start - начать сессию.")
+def command_help(message):
+    bot.send_message(message.chat.id, "Доступные команды на данный момент:\n" + "/models"
+                                                                                " - выбрать модель, которая будет использоваться"
+                                                                                " для ответа.\n/start - начать сессию.\n/providers"
+                                                                                " - выбрать провайдера, который будет использоваться")
 
 @bot.message_handler(commands=['models'])
 def send_models(message):
     bot.send_message(message.chat.id, "Выберите модель:", reply_markup=get_model_keyboard())
 
+@bot.message_handler(commands=['providers'])
+def send_providers(message):
+    bot.send_message(message.chat.id, "Выберите провайдера:", reply_markup=get_provider_keyboard())
+
 @bot.message_handler(func=lambda message: message.text in VALID_MODELS)
 def handle_model_selection(message):
     user_models[message.chat.id] = message.text
     bot.send_message(message.chat.id, f"Вы выбрали модель: {message.text}")
+
+@bot.message_handler(func=lambda message: message.text in VALID_PROVIDERS)
+def handle_provider_selection(message):
+    user_providers[message.chat.id] = message.text
+    bot.send_message(message.chat.id, f"Вы выбрали провайдера: {message.text}")
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
@@ -46,10 +68,12 @@ def handle_message(message):
     user_histories[user_id].append({"role": "user", "content": user_message})
 
     selected_model = user_models.get(user_id, 'gpt-4o')
-    response = analyze_with_chatgpt(user_message, user_histories[user_id], selected_model)
+    selected_provider = user_providers.get(user_id, 'Blackbox')
+    response = analyze_with_chatgpt(user_message, user_histories[user_id], selected_model, selected_provider)
 
     if response is None:
-        bot.send_message(message.chat.id, "Извините, выбранная модель недоступна. Пожалуйста, выберите другую модель.", reply_markup=get_model_keyboard())
+        bot.send_message(message.chat.id, "Извините, выбранная модель недоступна. Пожалуйста, "
+                                          "выберите другую модель.", reply_markup=get_model_keyboard())
     else:
         response = format_text(response)
         user_histories[user_id] = user_histories[user_id][-10:]
@@ -85,10 +109,14 @@ def handle_pdf(message):
             user_histories[user_id].append({"role": "user", "content": text_for_analysis})
 
             selected_model = user_models.get(user_id, 'gpt-4o')
-            analysis = analyze_with_chatgpt("Сделай полный анализ текста:\n" + text_for_analysis, user_histories[user_id], selected_model)
+            selected_provider = user_providers.get(user_id, 'Blackbox')
+
+            analysis = analyze_with_chatgpt("Сделай полный анализ текста:\n" + text_for_analysis,
+                                            user_histories[user_id], selected_model, selected_provider)
 
             if analysis is None:
-                bot.send_message(message.chat.id, "Извините, выбранная модель недоступна. Пожалуйста, выберите другую модель.", reply_markup=get_model_keyboard())
+                bot.send_message(message.chat.id, "Извините, выбранная модель недоступна. Пожалуйста, "
+                                                  "выберите другую модель.", reply_markup=get_model_keyboard())
             else:
                 analysis = format_text(analysis)
                 for part in split_message(analysis):

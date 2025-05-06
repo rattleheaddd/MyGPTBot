@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="messages history 10 instead of 100" />
+    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="made temp dir">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -47,19 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.bot.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.bot.executor": "Run",
+    "Python.gpt_handler.executor": "Run",
+    "Python.gpt_providers_check.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/vova/PycharmProjects/Trainee_PhotoBot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,6 +90,13 @@
       <workItem from="1742744830233" duration="1407000" />
       <workItem from="1742891175024" duration="2436000" />
       <workItem from="1742976996835" duration="411000" />
+      <workItem from="1742991543468" duration="1246000" />
+      <workItem from="1742999766168" duration="121000" />
+      <workItem from="1743003543641" duration="912000" />
+      <workItem from="1743058784509" duration="710000" />
+      <workItem from="1746523724499" duration="13000" />
+      <workItem from="1746523944901" duration="1000" />
+      <workItem from="1746532869701" duration="4423000" />
     </task>
     <task id="LOCAL-00001" summary="messages history 10 instead of 100">
       <option name="closed" value="true" />
@@ -90,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742977044383</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made temp dir">
+      <option name="closed" value="true" />
+      <created>1742991750431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742991750431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,9 +122,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="messages history 10 instead of 100" />
-    <option name="LAST_COMMIT_MESSAGE" value="messages history 10 instead of 100" />
+    <MESSAGE value="made temp dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="made temp dir" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MyGptTelegramBot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1742576526713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MyGptTelegramBot$gpt_providers_check.coverage" NAME="gpt_providers_check Coverage Results" MODIFIED="1746535011521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MyGptTelegramBot$gpt_handler.coverage" NAME="gpt_handler Coverage Results" MODIFIED="1746537315501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MyGptTelegramBot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1746537320949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

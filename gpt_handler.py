@@ -1,19 +1,20 @@
-# gpt_handler.py
+from g4f.Provider import FreeGpt
 from g4f.client import Client
 
-def analyze_with_chatgpt(message, chat_history, model):
+def analyze_with_chatgpt(message, chat_history, model, provider):
     client = Client()
 
     # Формируем историю сообщений для отправки в GPT
     messages = chat_history + [{"role": "user", "content": message}]
 
-    # Ограничиваем количество сообщений (например, последние 100)
-    if len(messages) > 100:
-        messages = messages[-100:]
+    # Ограничиваем количество сообщений
+    if len(messages) > 10:
+        messages = messages[-10:]
 
     try:
         response = client.chat.completions.create(
             model=model,
+            provider=provider,
             messages=messages,
             web_search=False
         )
@@ -25,7 +26,6 @@ def analyze_with_chatgpt(message, chat_history, model):
         response_text = response_text.replace('\\', '')
 
         # Форматируем математические выражения для Telegram
-        response_text = response_text.replace('pi', 'π')
         response_text = response_text.replace('r^2', 'r²')
         response_text = response_text.replace('sqrt', '√')
 
