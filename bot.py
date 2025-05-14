@@ -68,7 +68,7 @@ def handle_message(message):
     user_histories[user_id].append({"role": "user", "content": user_message})
 
     selected_model = user_models.get(user_id, 'gpt-4o')
-    selected_provider = user_providers.get(user_id, 'Blackbox')
+    selected_provider = user_providers.get(user_id, 'ChatGLM')
     response = analyze_with_chatgpt(user_message, user_histories[user_id], selected_model, selected_provider)
 
     if response is None:
