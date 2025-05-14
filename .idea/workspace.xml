@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="made provider selection, created new token for telegram">
+    <list default="true" id="ddf8d610-f08f-43b7-a878-5d089fefed7e" name="Changes" comment="made ChatGLM by default">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
@@ -98,6 +98,7 @@
       <workItem from="1746523944901" duration="1000" />
       <workItem from="1746532869701" duration="5625000" />
       <workItem from="1746613450867" duration="40000" />
+      <workItem from="1747218646303" duration="1750000" />
     </task>
     <task id="LOCAL-00001" summary="messages history 10 instead of 100">
       <option name="closed" value="true" />
@@ -123,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746537489993</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made ChatGLM by default">
+      <option name="closed" value="true" />
+      <created>1747218984768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747218984768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +142,8 @@
     <MESSAGE value="messages history 10 instead of 100" />
     <MESSAGE value="made temp dir" />
     <MESSAGE value="made provider selection, created new token for telegram" />
-    <option name="LAST_COMMIT_MESSAGE" value="made provider selection, created new token for telegram" />
+    <MESSAGE value="made ChatGLM by default" />
+    <option name="LAST_COMMIT_MESSAGE" value="made ChatGLM by default" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyGptTelegramBot$gpt_providers_check.coverage" NAME="gpt_providers_check Coverage Results" MODIFIED="1746535011521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

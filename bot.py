@@ -109,7 +109,7 @@ def handle_pdf(message):
             user_histories[user_id].append({"role": "user", "content": text_for_analysis})
 
             selected_model = user_models.get(user_id, 'gpt-4o')
-            selected_provider = user_providers.get(user_id, 'Blackbox')
+            selected_provider = user_providers.get(user_id, 'ChatGLM')
 
             analysis = analyze_with_chatgpt("Сделай полный анализ текста:\n" + text_for_analysis,
                                             user_histories[user_id], selected_model, selected_provider)
